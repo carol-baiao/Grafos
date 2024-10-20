@@ -12,3 +12,4 @@ Repositório criado para realização do trabalho de Grafos, em que será desenv
 - Natália Pereira
 - Gabriel Paiva
 - Matheus Filipe
+- Igor Alvarenga
