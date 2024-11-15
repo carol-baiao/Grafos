@@ -7,11 +7,19 @@ using System.Threading.Tasks;
 namespace BibliotecaGrafos.Estrutura
 {
     // construindo a classe da aresta que representa as relações entre os vértices
-    public class Aresta(Vertice v_origem, Vertice v_destino, int peso)
+    public class Aresta
     {
         public int Id { get; set; }
-        public Vertice VerticeOrigem { get; set; } = v_origem;
-        public Vertice VerticeDestino { get; set; } = v_destino;
-        public int Peso { get; set; } = peso;
+        public Vertice VerticeOrigem { get; set; }
+        public Vertice VerticeDestino { get; set; } 
+        public int Peso { get; set; } 
+
+        // construtor
+        public Aresta(Vertice v_origem, Vertice v_destino, int peso)
+        {
+            VerticeOrigem = v_origem;
+            VerticeDestino = v_destino;
+            Peso = peso;
+        }
     }
 }
