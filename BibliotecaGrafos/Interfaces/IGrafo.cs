@@ -9,9 +9,6 @@ namespace BibliotecaGrafos.Interfaces
 {
     public interface IGrafo
     {
-        // criar grafo (o número de vértices deve ser inserido pelo usuário)
-        void CriaGrafo(int qtd_vertices, bool isDirecionado);
-
         // verifica se grafo é vazio
         bool IsGrafoVazio();
 
