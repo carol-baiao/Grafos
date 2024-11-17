@@ -15,12 +15,12 @@ namespace BibliotecaGrafos.Estrutura
         public List<Aresta> ArestaOrigem { get; set; }  // lista de arestas que *saem* do vertice
         public List<Aresta> ArestaDestino { get; set; }  // lista de arestas que *chegam* no vertice
 
-        public Vertice(string id, string nome, List<Aresta> arestaOrigem, List<Aresta> arestaDestino)
+        public Vertice(string id, string nome)
         {
             Id_vertice = id;
             Nome = nome;
-            ArestaOrigem = arestaOrigem;
-            ArestaDestino = arestaDestino;
+            ArestaOrigem = new List<Aresta>();
+            ArestaDestino = new List<Aresta>();
         }
     }
 }

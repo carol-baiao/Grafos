@@ -35,7 +35,17 @@ namespace BibliotecaGrafos.Representacoes.ListaAdjacencia
 
         public void AddVertice(string id, string nome)
         {
-
+            if(HasVertice(id)) // checando se vertice existe 
+            {
+                Console.WriteLine($"O vértice {id} já existe!");
+            } else
+            {
+                Vertice novo_vertice = new Vertice(id, nome);
+                vertices.Add(novo_vertice); // add vertice na lista de vertices
+                lista_adjacencia.Add(new List<Aresta>()); // criando a lista de adjacencia do novo vertice
+                
+                Console.WriteLine($"O vértice {id} foi adicionado ao Grafo.")
+            }
         }
 
         public List<Aresta> GetAresta()
@@ -73,14 +83,14 @@ namespace BibliotecaGrafos.Representacoes.ListaAdjacencia
             throw new NotImplementedException();
         }
 
-        public bool HasAresta(int id_aresta)
+        public bool HasAresta(string id_aresta)
         {
             throw new NotImplementedException();
         }
 
-        public bool HasVertice(int id_vertice)
+        public bool HasVertice(string id_vertice) // finalizado
         {
-            throw new NotImplementedException();
+            return vertices.Exists(v => v.Id_vertice.Equals(id_vertice));
         }
 
         public bool IsArestasAdjacentes(Aresta a1, Aresta a2)
