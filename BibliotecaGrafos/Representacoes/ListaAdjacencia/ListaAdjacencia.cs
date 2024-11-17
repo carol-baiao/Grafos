@@ -43,8 +43,8 @@ namespace BibliotecaGrafos.Representacoes.ListaAdjacencia
                 Vertice novo_vertice = new Vertice(id, nome);
                 vertices.Add(novo_vertice); // add vertice na lista de vertices
                 lista_adjacencia.Add(new List<Aresta>()); // criando a lista de adjacencia do novo vertice
-                
-                Console.WriteLine($"O vértice {id} foi adicionado ao Grafo.")
+
+                Console.WriteLine($"O vértice {id} foi adicionado ao Grafo.");
             }
         }
 
