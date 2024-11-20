@@ -12,12 +12,9 @@ namespace Testes
 
             // Testando a adição de vértices
             Console.WriteLine("Adicionando vértices...");
-            grafo.AddVertice("1", "A");
-            grafo.AddVertice("2", "B");
-            grafo.AddVertice("3", "C");
-
-            // Tentando adicionar um vértice duplicado
-            grafo.AddVertice("1", "A");
+            grafo.AddVertice("6", "A");
+            grafo.AddVertice("7", "B");
+            grafo.AddVertice("8", "C");
 
             // Mostrando todos os vértices adicionados
             Console.WriteLine("\nLista de Vértices:");

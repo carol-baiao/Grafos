@@ -15,7 +15,7 @@ namespace BibliotecaGrafos.Representacoes.ListaAdjacencia
         private List<List<Aresta>> lista_adjacencia;
 
         // construtor
-        public ListaAdjacencia(int qtd_vertices, bool isDirecionado)
+        public ListaAdjacencia(int qtd_vertices, bool isDirecionado) // finalizado 
         {
             vertices = new List<Vertice>();
             this.isDirecionado = isDirecionado;
@@ -33,11 +33,11 @@ namespace BibliotecaGrafos.Representacoes.ListaAdjacencia
             throw new NotImplementedException();
         }
 
-        public void AddVertice(string id, string nome)
+        public void AddVertice(string id, string nome) // finalizado
         {
             if(HasVertice(id)) // checando se vertice existe 
             {
-                Console.WriteLine($"O vértice {id} já existe!");
+                throw new InvalidOperationException($"O vértice de id {id} já existe!");
             } else
             {
                 Vertice novo_vertice = new Vertice(id, nome);
@@ -73,14 +73,14 @@ namespace BibliotecaGrafos.Representacoes.ListaAdjacencia
             throw new NotImplementedException();
         }
 
-        public int GetQtdVertices()
+        public int GetQtdVertices() // finalizado
         {
-            throw new NotImplementedException();
+            return vertices.Count;
         }
 
-        public List<Vertice> GetVertices()
+        public List<Vertice> GetVertices() // finalizado
         {
-            throw new NotImplementedException();
+            return vertices;
         }
 
         public bool HasAresta(string id_aresta)
@@ -98,9 +98,9 @@ namespace BibliotecaGrafos.Representacoes.ListaAdjacencia
             throw new NotImplementedException();
         }
 
-        public bool IsDirecionado()
+        public bool IsDirecionado() // finalizado
         {
-            throw new NotImplementedException();
+            return this.isDirecionado;
         }
 
         public bool IsFortementeConexo()
