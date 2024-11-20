@@ -9,9 +9,6 @@ namespace BibliotecaGrafos.Interfaces
 {
     public interface IGrafo
     {
-        // criar grafo (o número de vértices deve ser inserido pelo usuário)
-        void CriaGrafo(int qtd_vertices, bool isDirecionado);
-
         // verifica se grafo é vazio
         bool IsGrafoVazio();
 
@@ -28,7 +25,7 @@ namespace BibliotecaGrafos.Interfaces
         int GetQtdVertices();
 
         // retorna se o vértice procurado existe no grafo
-        bool HasVertice(int id_vertice);
+        bool HasVertice(string id_vertice);
 
         // verifica adjacência entre dois vértices
         bool IsVerticeAdjacente(int v_origem, int v_destino);
@@ -52,7 +49,7 @@ namespace BibliotecaGrafos.Interfaces
         int GetQtdAresta();
 
         // retorna se a aresta procurada existe no grafo
-        bool HasAresta(int id_aresta);
+        bool HasAresta(string id_aresta);
 
         // verifica adjacencia entre duas arestas
         bool IsArestasAdjacentes(Aresta a1, Aresta a2);
